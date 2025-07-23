@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-link {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
