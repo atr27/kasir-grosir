@@ -38,7 +38,11 @@
                                 </div>
                                 <br>
                                 <div class="tampil-foto">
+<<<<<<< HEAD
                                     <img src="{{ $profil->foto_url }}" width="150">
+=======
+                                    <img src="{{ url($profil->foto ?? '/') }}" width="150">
+>>>>>>> b69a3f4038e55c285e211cca2e2ec313d8bffb3b
                                 </div>
                             </div>
                         </div>
@@ -104,8 +108,13 @@
                         contentType: false,
                     }).done((response) => {
                         $('[name=name]').val(response.name);
+<<<<<<< HEAD
                         $('.tampil-foto').html(`<img src="${response.foto_url}" width="150">`);
                         $('.image-profil').attr('src', response.foto_url);
+=======
+                        $('.tampil-foto').html(`<img src="{{ url('/') }}${response.foto}" width="150">`);
+                        $('.image-profil').attr('src', `{{ url('/') }}${response.foto}`);
+>>>>>>> b69a3f4038e55c285e211cca2e2ec313d8bffb3b
                         $('.alert').fadeIn();
                         setTimeout(() => {
                             $('.alert').fadeOut();

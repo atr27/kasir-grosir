@@ -18,7 +18,11 @@ class CheckLevelUser
      */
     public function handle(Request $request, Closure $next): Response
     {
+<<<<<<< HEAD
         if (!auth()->check() || auth()->user()->level != 1) {
+=======
+        if (!auth()->check() || !auth()->user()->level == 1) {
+>>>>>>> b69a3f4038e55c285e211cca2e2ec313d8bffb3b
             abort(403);
         }
         return $next($request);

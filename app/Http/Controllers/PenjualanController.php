@@ -155,7 +155,11 @@ class PenjualanController extends Controller
         }
         $detail = PenjualanDetail::with('produk')->where('id_penjualan', session('id_penjualan'))->get();
         $pdf = Pdf::loadview('penjualan.nota_besar', compact('pengaturan', 'penjualan', 'detail'));
+<<<<<<< HEAD
         $pdf->setPaper(0,0,609,440,'portrait');
+=======
+        $pdf->setPaper(0,0,609,440,'potrait');
+>>>>>>> b69a3f4038e55c285e211cca2e2ec313d8bffb3b
         return $pdf->stream('Transaksi-'.date('Y-m-d H:i:s').'.pdf');
     }
 }

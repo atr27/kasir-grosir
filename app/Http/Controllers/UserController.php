@@ -64,7 +64,10 @@ class UserController extends Controller
     public function profil()
     {
         $profil = auth()->user();
+<<<<<<< HEAD
         $profil->foto_url = asset($profil->foto ?: 'partials/dist/img/avatar5.png');
+=======
+>>>>>>> b69a3f4038e55c285e211cca2e2ec313d8bffb3b
         return view('user.profil',  compact('profil'));
     }
 
@@ -88,6 +91,7 @@ class UserController extends Controller
             $file =  $request->file('foto');
             $nama  =  'profil-' . $user->name . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('partials/dist/img'), $nama);
+<<<<<<< HEAD
             $user->foto = "partials/dist/img/$nama";
         }
 
@@ -97,5 +101,12 @@ class UserController extends Controller
             'foto' => $user->foto,
             'foto_url' => asset($user->foto ?: 'partials/dist/img/avatar5.png')
         ], 200);
+=======
+            $user->foto = "/partials/dist/img/$nama";
+        }
+
+        $user->update();
+        return response()->json($user,  200);
+>>>>>>> b69a3f4038e55c285e211cca2e2ec313d8bffb3b
     }
 }

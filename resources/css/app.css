@@ -5,6 +5,7 @@
 [x-cloak] {
     display: none;
 }
+<<<<<<< HEAD
 
 @media (max-width: 768px) {
     .nav-link {
@@ -12,3 +13,5 @@
         -webkit-tap-highlight-color: transparent;
     }
 }
+=======
+>>>>>>> b69a3f4038e55c285e211cca2e2ec313d8bffb3b
