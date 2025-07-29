@@ -16,13 +16,10 @@
 
         <!-- Styles -->
         @livewireStyles
-<<<<<<< HEAD
-
+        
         <!-- AdminLTE dan Dependencies -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
-=======
->>>>>>> b69a3f4038e55c285e211cca2e2ec313d8bffb3b
     </head>
     <body class="font-sans antialiased">
         <x-banner />
@@ -46,10 +43,6 @@
         </div>
 
         @stack('modals')
-<<<<<<< HEAD
-=======
-
->>>>>>> b69a3f4038e55c285e211cca2e2ec313d8bffb3b
         @livewireScripts
     </body>
 </html>
